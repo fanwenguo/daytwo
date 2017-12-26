@@ -1,0 +1,207 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-size: .14rem;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "΢���ź�";
+    text-size-adjust: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 625%;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 0.32rem;
+}
+
+img,
+div,
+body,
+html,
+ul,
+li,
+a {
+    -webkit-touch-callout: none;
+}
+
+input,
+button {
+    outline: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #999;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.header,
+.footer {
+    width: 100%;
+    height: 1rem;
+    display: flex;
+}
+
+//头部
+.header {
+    justify-content: space-between;
+    padding: 0 0.2rem;
+    background: #393A3F;
+    div {
+        flex: 1;
+        color: #fff;
+        line-height: 1rem;
+        font-size: 0.32rem;
+        display: flex;
+        &:last-child {
+            justify-content: flex-end;
+        }
+        a {
+            display: inline-block;
+            width: 1rem;
+            height: 100%;
+            color: #fff;
+            font-size: 0.32rem;
+            text-align: center;
+            line-height: 1rem;
+        }
+    }
+}
+
+.main {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.friend-list {
+    width: 100%;
+    .friend-child-list {
+        width: 100%;
+        height: 1.5rem;
+        padding: 0.2rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.01rem solid #ccc;
+        justify-content: space-between;
+        position: relative;
+        .erji {
+            position: absolute;
+            left: 50%;
+            top: 1.5rem;
+            width: 2.2rem;
+            height: 3.93rem;
+            background: #fff;
+            box-shadow: 0px 0px 10px 1px #666;
+            border-radius: 0.1rem;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            li {
+                flex: 1;
+                padding: 0 0.3rem;
+                display: flex;
+                align-items: center;
+                a {
+                    font-size: 0.32rem;
+                }
+            }
+        }
+        img {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.2rem;
+        }
+        &>div {
+            width: 4.75rem;
+            height: 100%;
+            h3 {
+                font-size: 0.32rem;
+                margin-bottom: 0.1rem;
+            }
+            p {
+                font-size: 0.26rem;
+                color: #999999;
+                width: 80%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+        span {
+            font-size: 0.26rem;
+            height: 100%;
+            color: #999;
+            display: block;
+        }
+    }
+    .friend-child-list:active{
+        background:#eee;
+    }
+}
+
+//脚部
+.footer {
+    dl {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #A19CA0;
+        dt {
+            font-size: 0.4rem;
+        }
+        dd {
+            a {
+                font-size: 0.16rem;
+                color: #A19CA0;
+            }
+        }
+    }
+}
+
+.dialog{
+    position:fixed;
+    pointer-events: none;//禁止一切点击事件
+    left:50%;
+    padding:0.2rem;
+    background:#fff;
+    visibility: hidden;
+    box-shadow:0px 0px 2px 2px #eee;
+    li{
+        width: 100%;
+        height: 0.8rem;
+        line-height:0.8rem;
+        text-align: center;
+        color:#000;
+
+    }
+}
